@@ -1,0 +1,93 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "KhongMinh@book.com",
+      "password": "123456",
+      "name": "KhongMinh",
+      "role": "seller",
+      "phone": "0123456789",
+      "address": "Hanoi"
+    },
+    {
+      "id": 2,
+      "email": "TuMaY@book.com",
+      "password": "123456",
+      "name": "TuMaY",
+      "role": "buyer",
+      "phone": "0987654321",
+      "address": "Ho Chi Minh City"
+    }
+  ],
+  "categories": [
+    { "id": 1, "name": "Literature" },
+    { "id": 2, "name": "Economics" },
+    { "id": 3, "name": "Science" },
+    { "id": 4, "name": "Children" }
+  ],
+  "books": [
+    {
+      "id": 1,
+      "title": "How to Win Friends and Influence People",
+      "author": "Dale Carnegie",
+      "categoryId": 2,
+      "price": 85000,
+      "stock": 50,
+      "description": "A book about communication and interpersonal skills",
+      "image": "/assets/book1.jpg"
+    },
+    {
+      "id": 2,
+      "title": "The Alchemist",
+      "author": "Paulo Coelho",
+      "categoryId": 1,
+      "price": 75000,
+      "stock": 30,
+      "description": "A world-famous novel",
+      "image": "/assets/book2.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Sapiens",
+      "author": "Yuval Noah Harari",
+      "categoryId": 3,
+      "price": 150000,
+      "stock": 20,
+      "description": "A brief history of humankind",
+      "image": "/assets/book3.jpg"
+    },
+    {
+      "id": 4,
+      "title": "The Adventures of a Cricket",
+      "author": "To Hoai",
+      "categoryId": 4,
+      "price": 45000,
+      "stock": 40,
+      "description": "A Vietnamese children’s story",
+      "image": "/assets/book4.jpg"
+    }
+  ],
+  "orders": [
+    {
+      "id": 1,
+      "userId": 2,
+      "items": [
+        { "bookId": 1, "quantity": 2, "price": 85000 }
+      ],
+      "totalAmount": 170000,
+      "status": "pending",
+      "createdAt": "2024-11-01T10:00:00"
+    }
+  ],
+  "bills": [
+    {
+      "id": 1,
+      "orderId": 1,
+      "userId": 2,
+      "totalAmount": 170000,
+      "paymentMethod": "cash",
+      "isPaid": false,
+      "createdAt": "2024-11-01T10:00:00"
+    }
+  ]
+}
