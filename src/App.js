@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
-
 import LoginPage from './pages/LoginPage';
 import SellerDashboard from './pages/SellerDashboard';
 import BuyerDashboard from './pages/BuyerDashboard';
@@ -13,12 +12,49 @@ function App() {
   const [currentUser, setCurrentUser] = useState(null);
   const [cart, setCart] = useState([]);
 
+  useEffect(() => {
+    const savedUser = localStorage.getItem('currentUser');
+    const savedCart = localStorage.getItem('cart');
+    
+    if (savedUser) {
+      setCurrentUser(JSON.parse(savedUser));
+    }
+    
+    if (savedCart) {
+      setCart(JSON.parse(savedCart));
+    }
+  }, []);
+
+  useEffect(() => {
+    if (currentUser) {
+      localStorage.setItem('currentUser', JSON.stringify(currentUser));
+    } else {
+      localStorage.removeItem('currentUser');
+    }
+  }, [currentUser]);
+
+  useEffect(() => {
+    if (cart.length > 0) {
+      localStorage.setItem('cart', JSON.stringify(cart));
+    } else {
+      localStorage.removeItem('cart');
+    }
+  }, [cart]);
+
   return (
     <Router>
       <Routes>
         <Route 
           path="/" 
-          element={<LoginPage setCurrentUser={setCurrentUser} />} 
+          element={
+            currentUser ? (
+              currentUser.role === 'seller' ? 
+              <Navigate to="/seller" /> : 
+              <Navigate to="/buyer" />
+            ) : (
+              <LoginPage setCurrentUser={setCurrentUser} />
+            )
+          } 
         />
         <Route 
           path="/seller" 
