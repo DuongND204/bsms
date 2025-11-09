@@ -20,10 +20,10 @@
     }
   ],
   "categories": [
-    { "id": 1, "name": "Literature" },
-    { "id": 2, "name": "Economics" },
-    { "id": 3, "name": "Science" },
-    { "id": 4, "name": "Children" }
+    { "id": 1, "name": "Adventure" },
+    { "id": 2, "name": "Wars" },
+    { "id": 3, "name": "Romantic" },
+    { "id": 4, "name": "Action" }
   ],
   "books": [
     {
@@ -86,7 +86,7 @@
       "userId": 2,
       "totalAmount": 170000,
       "paymentMethod": "cash",
-      "isPaid": false,
+      "isPaid": true,
       "createdAt": "2024-11-01T10:00:00"
     }
   ]

@@ -47,7 +47,7 @@ function OrdersPage({ currentUser, setCurrentUser }) {
   };
 
   const getBookTitle = (bookId) => {
-    const book = books.find(b => b.id === bookId);
+    const book = books.find(b => Number(b.id) === Number(bookId));
     return book ? book.title : 'N/A';
   };
 
