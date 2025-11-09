@@ -142,7 +142,7 @@ function BuyerDashboard({ currentUser, setCurrentUser, cart, setCart }) {
 
                 <div className="row g-4">
                     {filteredBooks.map(book => {
-                        const category = categories.find(c => c.id === book.categoryId);
+                        const category = categories.find(c => Number(c.id) === Number(book.categoryId));
                         return (
                             <div key={book.id} className="col-md-6 col-lg-4 col-xl-3">
                                 <div className="card h-100 shadow-sm" style={{ transition: 'transform 0.2s' }}>
