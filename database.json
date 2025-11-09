@@ -28,8 +28,8 @@
   "books": [
     {
       "id": 1,
-      "title": "How to Win Friends and Influence People",
-      "author": "Dale Carnegie",
+      "title": "Tam Quoc Dien Nghia",
+      "author": "La Quan Trung",
       "categoryId": 2,
       "price": 85000,
       "stock": 50,
@@ -38,8 +38,8 @@
     },
     {
       "id": 2,
-      "title": "The Alchemist",
-      "author": "Paulo Coelho",
+      "title": "Tay Du Ky",
+      "author": "Ngo Thua An",
       "categoryId": 1,
       "price": 75000,
       "stock": 30,
@@ -48,8 +48,8 @@
     },
     {
       "id": 3,
-      "title": "Sapiens",
-      "author": "Yuval Noah Harari",
+      "title": "Hoang Lau Mong",
+      "author": "Tao Tuyet Can",
       "categoryId": 3,
       "price": 150000,
       "stock": 20,
@@ -58,8 +58,8 @@
     },
     {
       "id": 4,
-      "title": "The Adventures of a Cricket",
-      "author": "To Hoai",
+      "title": "Thuy Hu",
+      "author": "Thi Nai Am",
       "categoryId": 4,
       "price": 45000,
       "stock": 40,
